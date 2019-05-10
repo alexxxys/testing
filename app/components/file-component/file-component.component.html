@@ -1,0 +1,23 @@
+<div class="row file-style pt-3" *ngFor="let file of files">
+  <div class="col-2">
+    <img src="{{file.type !== 'text/csv' && file.type !==
+    'text/plain' ? '../../../assets/images/iconfinder_Key_file_extension_presentation_3044893.svg' :
+     file.type === 'text/plain' ? '../../../assets/images/iconfinder_Txt_file_extension_word_processor_text_3876412.svg' :
+      '../../../assets/images/iconfinder_csv_file_database_extension_data_3876336.svg'
+}}" alt="">
+  </div>
+  <div class="col-6 pt-3">
+    {{file.name}}
+  </div>
+  <div class="col-3 pt-2" *ngIf="file.type === 'text/csv' || file.type === 'text/plain'">
+    <button class="view-key-button">View key</button>
+  </div>
+
+  <div class="col-4 pt-3" style="text-align: right" *ngIf="file.type !== 'text/csv' && file.type !== 'text/plain'">
+    <span style="color: red;">Invalid file</span>
+  </div>
+
+  <div class="col-1 pt-2" *ngIf="file.type === 'text/csv' || file.type === 'text/plain'">
+    <img src="../../../assets/images/rubbish-bin-delete-button.svg" alt="" width="32" height="32">
+  </div>
+</div>

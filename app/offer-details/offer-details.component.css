@@ -1,0 +1,84 @@
+.offer-panel {
+  border-top-left-radius: .35rem;
+  border-top-right-radius: .35rem;
+}
+.nav-link {
+  color: #6a6969;
+  cursor: pointer;
+  padding: 0.7rem 1rem 1rem 1rem;
+}
+
+.nav-item {
+  background: black;
+}
+
+.nav-item :hover {
+  color: #73c020;
+  border-top: 8px solid #71be1e !important;
+  background-color: #273714;
+}
+
+ul.nav.nav-tabs > li.nav-item > a.nav-link.active {
+  color: #73c020;
+  border-top: 8px solid #71be1e;
+  background-color: #273714;
+}
+
+ul.nav.nav-tabs > li.nav-item > a {
+  height: 100%;
+}
+
+.nav-tabs .nav-link {
+  border: 0;
+  border-top: 8px solid transparent;
+  border-top-left-radius: .35rem;
+  border-top-right-radius: .35rem;
+}
+
+.upload-area {
+  height: 400px;
+}
+
+textarea {
+  border: none;
+
+  overflow: hidden;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none;
+
+  padding-left: 30px;
+}
+
+.key-editor {
+  width: 100%;
+  height: calc(100% - 3px);
+  /*height: 100%;*/
+}
+
+.key-editor-block {
+  position: absolute;
+  width: calc(100% + 70px) !important;
+  height: 100%;
+  /*padding-right: 100px;*/
+  left: -70px;
+}
+
+.custom-file-label, .custom-file {
+  height: 60px;
+}
+
+.custom-file-input ~ .custom-file-label::after {
+  content: 'BROWSE';
+  color: white;
+  text-align: center;
+  background: #7ed321;
+  font-weight: bold;
+  padding-top: 17px;
+  width: 100px;
+  height: 100%;
+}

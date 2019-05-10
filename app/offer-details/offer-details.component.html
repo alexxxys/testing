@@ -1,0 +1,56 @@
+<div class="h-100 w-100 offer-panel">
+  <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="manually-tab" href="#manually" data-toggle="tab" role="tab"
+         aria-controls="manually"
+         aria-selected="true">Manually</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="doc-tab" data-toggle="tab" href="#doc" role="tab" aria-controls="doc"
+         aria-selected="false">TXT, CSV, PNG, RAR</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="picture-tab" data-toggle="tab" href="#picture" role="tab" aria-controls="picture"
+         aria-selected="false">UPLOAD AS PICTURES</a>
+    </li>
+  </ul>
+  <div class="tab-content w-100 upload-area" id="myTabContent">
+    <div class="tab-pane fade show active key-editor-block" id="manually" role="tabpanel" style="overflow: auto;"
+         aria-labelledby="manually-tab">
+      <table style="width: 100%; height: 100%; float: left; color: white" class="table mb-0">
+        <tbody>
+        <tr class="text-center">
+          <span></span>
+          <td rowspan="0" class="p-0">
+            <textarea class="key-editor" #areaVal (keyup)="changeAreaNumbers(areaVal)"></textarea>
+          </td>
+        </tr>
+        <tr *ngFor="let i of numbers" class="text-center" style="background: black;">
+          <span>{{i}}.</span>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="tab-pane fade w-100 h-100" id="doc" role="tabpanel" aria-labelledby="doc-tab">
+
+      <div class="mt-2">
+        <h5 style="color: #d5d5d5">Import files</h5>
+        <h6 style="color: #808080">(.TXT, .CSV)</h6>
+      </div>
+
+      <div class="custom-file" id="customFile" lang="es">
+        <input type="file" class="custom-file-input" id="exampleInputFile" #file (change)="changeFile(file)" aria-describedby="fileHelp">
+        <label class="custom-file-label pt-3" for="exampleInputFile">
+          Select files to upload
+        </label>
+      </div>
+      <span style="color: #808080">Maximum file to upload: 100kb</span>
+
+      <app-file-component [files]="files"></app-file-component>
+    </div>
+    <div class="tab-pane fade" id="picture" role="tabpanel" aria-labelledby="picture-tab">3</div>
+  </div>
+</div>
+
